@@ -1,0 +1,35 @@
+.linkedinlogo {
+  width: 150px;
+  height: 200px;
+}
+/* The animation code */
+/* @keyframes triggers the start of the animation, then you type in the name of the animation, this is the same name you will link to the element you want to apply the animation to */
+@keyframes animatedLogo {
+  0% {
+    /* At 0% border radius,the logo is a square, at 100%, it's a circle  */
+    border-radius: 0%;
+    filter: none;
+    transform: rotate(0deg);
+  }
+  25% {
+    border-radius: 100%;
+    filter: drop-shadow(100%);
+    transform: rotate(180deg);
+  }
+  50% {
+    filter: brightness(45%);
+    transform: rotate(360deg);
+  }
+  100% {
+    filter: sepia(1);
+    transform: rotate(500deg);
+  }
+}
+/* The element to apply the animation to */
+.linkedinlogo:hover {
+  animation-name: animatedLogo;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
